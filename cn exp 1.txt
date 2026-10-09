@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char ip[20];
+
+    printf("LAN Connectivity Testing Program\n");
+    printf("--------------------------------\n");
+
+    printf("Enter the IP address to ping: ");
+    scanf("%19s", ip);
+
+    printf("\nPinging %s...\n\n", ip);
+
+    char command[50];
+    sprintf(command, "ping -n 4 %s", ip);
+
+    system(command);
+
+    return 0;
+}
